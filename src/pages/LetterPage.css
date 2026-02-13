@@ -1,0 +1,75 @@
+.letter-page {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  top: -30px;
+}
+
+.letter-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 32px 28px;
+  max-width: 380px;
+  width: calc(100% - 48px);
+  box-shadow: 0 8px 40px rgba(194, 24, 91, 0.15);
+  z-index: 1;
+  text-align: center;
+}
+
+.letter-header {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.letter-to {
+  font-size: 26px;
+  font-weight: 700;
+  color: #c2185b;
+  margin-bottom: 20px;
+}
+
+.letter-body {
+  text-align: left;
+  font-size: 19px;
+  color: #5d3a4a;
+  line-height: 1.8;
+}
+
+.letter-body p {
+  margin-bottom: 14px;
+}
+
+.letter-sign {
+  text-align: right;
+  font-weight: 700;
+  color: #e91e63;
+  margin-top: 8px;
+}
+
+.happy-valentine {
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 8px rgba(194, 24, 91, 0.4);
+  z-index: 1;
+}

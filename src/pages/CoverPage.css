@@ -1,0 +1,60 @@
+.cover-page {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #fff0f5 0%, #fce4ec 40%, #f8bbd0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-heart {
+  position: absolute;
+}
+
+.cover-content {
+  text-align: center;
+  z-index: 1;
+  padding: 0 24px;
+}
+
+.cover-book-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.cover-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #c2185b;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  text-shadow: 0 2px 8px rgba(194, 24, 91, 0.15);
+}
+
+.cover-subtitle {
+  font-size: 22px;
+  color: #e57399;
+  margin-bottom: 40px;
+}
+
+.start-btn {
+  font-family: 'Gaegu', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f48fb1, #e91e63);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
+  letter-spacing: 1px;
+}
