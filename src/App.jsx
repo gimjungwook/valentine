@@ -13,7 +13,7 @@ const stories = [
     bg: 'linear-gradient(160deg, #1a1a40 0%, #1b2a5c 50%, #2d1b69 100%)',
   },
   {
-    text: 'She said something first.\nSomething that changed everything.',
+    text: 'One day,\non KakaoTalk,\nshe said it.',
     emoji: '💬',
     bg: 'linear-gradient(160deg, #2c3e50 0%, #4a5568 50%, #667eea 100%)',
   },
@@ -24,14 +24,15 @@ const stories = [
     big: true,
   },
   {
-    text: 'That night,\nthey talked until\nthe sun came up.',
-    emoji: '🌙',
+    text: 'He didn\'t reply.\nNot that day.\nNot the next.',
+    emoji: '😶',
     bg: 'linear-gradient(160deg, #0d1b2a 0%, #1b263b 40%, #415a77 100%)',
   },
   {
-    text: 'And the next night.\nAnd the next.',
-    emoji: '✨',
+    text: 'But then...\nhe said yes.',
+    emoji: '💕',
     bg: 'linear-gradient(160deg, #1a237e 0%, #3949ab 40%, #7986cb 100%)',
+    big: true,
   },
   {
     text: 'Time zones?\nDidn\'t matter.',
@@ -217,10 +218,10 @@ function LetterSection() {
         <h2 className="letter-to">My Lovable Personal Person,</h2>
         <div className="letter-body">
           <p>
-            Remember that night on Moji?
-            When you said you liked me first?
-            That was the moment
-            my whole world changed.
+            Remember when you told me
+            you liked me on KakaoTalk?
+            I didn't reply for days.
+            But my heart already knew.
           </p>
           <p>
             Every late night call,
