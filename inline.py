@@ -5,7 +5,17 @@ import glob
 with open(r'C:\Projects\valentine\dist\index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
-# Find JS file dynamically
+# Find and inline CSS file
+css_files = glob.glob(r'C:\Projects\valentine\dist\assets\index-*.css')
+if css_files:
+    with open(css_files[0], 'r', encoding='utf-8') as f:
+        css = f.read()
+    
+    # Remove external CSS link and add inline style
+    html = re.sub(r'<link rel="stylesheet"[^>]*\.css[^>]*>', '', html)
+    html = html.replace('</head>', f'<style>{css}</style>\n</head>')
+
+# Find and inline JS file
 js_files = glob.glob(r'C:\Projects\valentine\dist\assets\index-*.js')
 if js_files:
     with open(js_files[0], 'r', encoding='utf-8') as f:
