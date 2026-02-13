@@ -144,7 +144,7 @@ function CoverSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <h1 className="cover-title">To My LPP</h1>
+        <h1 className="cover-title">To My Lovable Personal Person</h1>
         <p className="cover-subtitle">Kristina, this is for you</p>
         <motion.div 
           className="scroll-hint"
