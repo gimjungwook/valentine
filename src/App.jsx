@@ -187,87 +187,57 @@ function CoverSection() {
   )
 }
 
-function LetterSection() {
+function EndingSection() {
   return (
-    <section className="letter-section">
+    <section className="ending-section">
       <motion.div 
-        className="letter-card"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div 
-          className="letter-header"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 200 }}
-        >
-          💌
-        </motion.div>
-        <h2 className="letter-to">My Lovable Personal Person,</h2>
-        <div className="letter-body">
-          <p>
-            Remember when you told me
-            you liked me on KakaoTalk?
-            I didn't reply for days.
-            But my heart already knew.
-          </p>
-          <p>
-            Every late night call,
-            every message,
-            every "goodnight" and "good morning" —
-            you made 9,000 km
-            feel like nothing.
-          </p>
-          <p>
-            July is coming.
-            I'll finally hold your hand.
-            I'll finally see your smile
-            without a screen between us.
-          </p>
-          <p>
-            Kristina Kim —
-            I love everything about that name.
-          </p>
-          <p className="letter-sign">
-            Forever yours,<br/>Jungwook 💕
-          </p>
-        </div>
-      </motion.div>
-      
-      <motion.div
-        className="happy-valentine"
-        initial={{ opacity: 0, scale: 0.5 }}
+        className="ending-content"
+        initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, type: "spring" }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
       >
-        Happy Valentine's Day 💝
+        <motion.h1 
+          className="ending-text"
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          I love you, Kristina
+        </motion.h1>
+        <motion.p 
+          className="ending-subtext"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+        >
+          Happy Valentine's Day 💕
+        </motion.p>
       </motion.div>
 
-      {/* Falling hearts */}
-      <div className="falling-hearts">
-        {[...Array(20)].map((_, i) => (
+      {/* Floating hearts */}
+      <div className="ending-hearts">
+        {[...Array(15)].map((_, i) => (
           <motion.span
             key={i}
-            className="falling-heart"
+            className="floating-heart"
             style={{
               left: `${Math.random() * 100}%`,
-              fontSize: `${14 + Math.random() * 20}px`,
+              top: `${Math.random() * 100}%`,
+              fontSize: `${18 + Math.random() * 24}px`,
             }}
             animate={{
-              y: ['-10vh', '110vh'],
-              rotate: [0, 360],
-              opacity: [0, 1, 1, 0],
+              y: [0, -30, 0],
+              opacity: [0.3, 0.8, 0.3],
+              scale: [1, 1.2, 1],
             }}
             transition={{
-              duration: 5 + Math.random() * 5,
+              duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: "linear",
+              delay: Math.random() * 2,
             }}
           >
-            {['💗', '💕', '🌸', '💖'][i % 4]}
+            {['💗', '💕', '✨', '💖', '🌸'][i % 5]}
           </motion.span>
         ))}
       </div>
@@ -282,7 +252,7 @@ export default function App() {
       {stories.map((story, index) => (
         <StorySection key={index} story={story} index={index} />
       ))}
-      <LetterSection />
+      <EndingSection />
     </div>
   )
 }
