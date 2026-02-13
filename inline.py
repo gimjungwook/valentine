@@ -32,9 +32,19 @@ with open(r'C:\Projects\valentine\valentine-single.html', 'w', encoding='utf-8')
 
 # Copy to docs/index.html for GitHub Pages (docs folder deployment)
 import os
+import shutil
 os.makedirs(r'C:\Projects\valentine\docs', exist_ok=True)
 with open(r'C:\Projects\valentine\docs\index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
+# Copy images folder to docs
+src_images = r'C:\Projects\valentine\dist\images'
+dst_images = r'C:\Projects\valentine\docs\images'
+if os.path.exists(src_images):
+    if os.path.exists(dst_images):
+        shutil.rmtree(dst_images)
+    shutil.copytree(src_images, dst_images)
+    print('Copied images folder')
+
 print('Done! Size:', len(html), 'bytes')
-print('Output: valentine-single.html + docs/index.html')
+print('Output: valentine-single.html + docs/index.html + docs/images/')

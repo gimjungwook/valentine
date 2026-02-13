@@ -140,20 +140,10 @@ function CoverSection() {
     <section className="cover-section">
       <motion.div 
         className="cover-content"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
-        <motion.div 
-          className="cover-emoji"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            rotate: [0, 5, -5, 0]
-          }}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          💌
-        </motion.div>
         <h1 className="cover-title">To My LPP</h1>
         <p className="cover-subtitle">Kristina, this is for you</p>
         <motion.div 
