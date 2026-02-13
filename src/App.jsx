@@ -197,11 +197,19 @@ function EndingSection() {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
+        <motion.p 
+          className="ending-lpp"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          My Lovable Personal Person
+        </motion.p>
         <motion.h1 
           className="ending-text"
           initial={{ y: 30 }}
           whileInView={{ y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
         >
           I love you, Kristina
         </motion.h1>
@@ -209,7 +217,7 @@ function EndingSection() {
           className="ending-subtext"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ delay: 1, duration: 0.8 }}
         >
           Happy Valentine's Day 💕
         </motion.p>
