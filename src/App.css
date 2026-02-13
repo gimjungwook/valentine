@@ -6,7 +6,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -30,7 +29,6 @@ body {
   background: linear-gradient(160deg, #fff0f5 0%, #fce4ec 40%, #f8bbd0 100%);
   position: relative;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
 .cover-content {
@@ -92,7 +90,6 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
 .story-content {
@@ -151,7 +148,6 @@ body {
   position: relative;
   overflow: hidden;
   padding: 60px 24px;
-  scroll-snap-align: start;
 }
 
 .letter-card {
