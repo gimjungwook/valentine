@@ -1,7 +1,8 @@
 import re
 import glob
+import shutil
 
-# Read HTML
+# Read HTML from dist
 with open(r'C:\Projects\valentine\dist\index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
@@ -29,8 +30,11 @@ if js_files:
 with open(r'C:\Projects\valentine\valentine-single.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-# Also copy to index.html for GitHub Pages
-with open(r'C:\Projects\valentine\index.html', 'w', encoding='utf-8') as f:
+# Copy to docs/index.html for GitHub Pages (docs folder deployment)
+import os
+os.makedirs(r'C:\Projects\valentine\docs', exist_ok=True)
+with open(r'C:\Projects\valentine\docs\index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
 print('Done! Size:', len(html), 'bytes')
+print('Output: valentine-single.html + docs/index.html')
