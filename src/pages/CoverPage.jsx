@@ -42,9 +42,9 @@ export default function CoverPage({ onStart }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <div className="cover-book-icon">📖</div>
-        <h1 className="cover-title">Our Story</h1>
-        <p className="cover-subtitle">A meeting that can't be explained</p>
+        <div className="cover-book-icon">💌</div>
+        <h1 className="cover-title">To My LPP</h1>
+        <p className="cover-subtitle">Kristina, this is for you</p>
 
         <motion.button
           className="start-btn"
@@ -55,7 +55,7 @@ export default function CoverPage({ onStart }) {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
         >
-          Begin ♡
+          Open ♡
         </motion.button>
       </motion.div>
     </motion.div>

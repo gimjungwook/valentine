@@ -59,29 +59,33 @@ export default function LetterPage({ direction }) {
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         <div className="letter-header">💌</div>
-        <h2 className="letter-to">Dear Kristina,</h2>
+        <h2 className="letter-to">My Lovable Personal Person,</h2>
         <div className="letter-body">
           <p>
-            Out of 8 billion people,
-            I found you.
+            Remember that night on Moji?
+            When you said you liked me first?
+            That was the moment
+            my whole world changed.
           </p>
           <p>
-            We haven't met in person yet,
-            but every moment with you —
-            even through a screen —
-            is the most precious thing
-            in my world.
+            Every late night call,
+            every message,
+            every "goodnight" and "good morning" —
+            you made 9,000 km
+            feel like nothing.
           </p>
           <p>
-            This summer, when we finally meet,
-            I'll say everything
-            I've been wanting to tell you.
+            July is coming.
+            I'll finally hold your hand.
+            I'll finally see your smile
+            without a screen between us.
           </p>
           <p>
-            Until then, and forever after —
+            Kristina Kim —
+            I love everything about that name.
           </p>
           <p className="letter-sign">
-            I love you 💕
+            Forever yours,<br/>Jungwook 💕
           </p>
         </div>
       </motion.div>
