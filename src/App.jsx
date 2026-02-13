@@ -1,5 +1,4 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import './App.css'
 
 const stories = [
@@ -80,44 +79,30 @@ const stories = [
 ]
 
 function StorySection({ story, index }) {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  })
-  
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8])
-  const y = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [100, 0, 0, -100])
-  const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [-5, 0, 5])
-
   return (
     <section
-      ref={ref}
       className="story-section"
       style={{ background: story.bg }}
     >
       <motion.div 
         className="story-content"
-        style={{ opacity, scale, y }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
       >
         <motion.div 
           className="story-emoji"
-          style={{ rotate }}
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
         >
           {story.emoji}
         </motion.div>
-        <motion.p 
-          className={`story-text ${story.big ? 'big' : ''} ${story.dark ? 'dark' : ''}`}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
+        <p className={`story-text ${story.big ? 'big' : ''} ${story.dark ? 'dark' : ''}`}>
           {story.text}
-        </motion.p>
+        </p>
       </motion.div>
       
       {/* Floating particles */}
@@ -212,20 +197,14 @@ function CoverSection() {
 }
 
 function LetterSection() {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "center center"]
-  })
-  
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-
   return (
-    <section ref={ref} className="letter-section">
+    <section className="letter-section">
       <motion.div 
         className="letter-card"
-        style={{ scale, opacity }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
       >
         <motion.div 
           className="letter-header"
